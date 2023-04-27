@@ -32,9 +32,73 @@ body {
 }
 
 .sideImage {
-  background: url(../img/hacettepe2.png) no-repeat;
+  background: url(../img/elif_tekinay&Hilal_nur_koyuncu.png) no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.first-txt {
+  position: absolute;
+width: 316px;
+height: 96px;
+left: 1418px;
+top: 781px;
+
+font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 44px;
+/* or 122% */
+
+text-align: center;
+letter-spacing: -0.64px;
+
+color: #FFFFFF;
+}
+
+.second-txt {
+  position: absolute;
+width: 316px;
+height: 96px;
+left: 1418px;
+top: 851px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 44px;
+/* or 122% */
+
+text-align: center;
+letter-spacing: -0.64px;
+
+color: #FFFFFF;
+}
+
+.terms-conditions {
+  position: absolute;
+  width: 373px;
+  height: 28px;
+  left: 382px;
+  top: 901px;
+
+  /* 16PX/Body/Regular */
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height, or 175% */
+
+  letter-spacing: -0.18px;
+
+  color: #032D23;
+
+  content: "Copyright © 2023 Yurt Homies All rights reserved."
+
 }
 
 .auth-form-container,

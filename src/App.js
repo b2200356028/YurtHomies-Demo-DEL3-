@@ -18,8 +18,12 @@ function App() {
         {
           currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : currentForm === "forgotpwd" ? <ForgotPassword onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
         }
+        <h3 className='terms-conditions'> Copyright © 2023 Yurt Homies All rights reserved. </h3>
       </div>
-      <div className="sideImage"></div>
+      <div className="sideImage">
+        <h3 className='first-txt'> Captured By</h3>
+        <h3 className='second-txt'> - Elif Tekinay & Hilal Nur Koyuncu</h3>
+      </div>
     </div>
   );
 }
