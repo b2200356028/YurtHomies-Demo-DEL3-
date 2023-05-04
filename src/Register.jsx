@@ -1,12 +1,34 @@
 import React, { useState } from "react";
+import axios from 'axios';
 
 export const Register = (props) => {
+    const [firstName, setFirstName] = useState('');
     const [name, setName] = useState('');
+    const [lastName, setLastName] = useState('');
     const [id, setID] = useState('');
 
-    const handleSubmit = (e) => {
+    
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(id);
+        try{
+         const a = name.split(" ")
+
+         await axios.post("http://localhost:8080/auth/register",
+            {
+                id : id,
+                firstName : a[0],
+                lastName : a[a.length-1]
+            });
+                alert("Student Registration Succesfully");
+                setFirstName(firstName);
+                setLastName(lastName);
+                setID(id);
+        }
+        catch(err){
+            alert("User Registration Failed");
+            console.log("asdasdsad");
+        }
+
     }
 
     return (

@@ -9,10 +9,10 @@ export const Login = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8080/users/login', {
+            const response = await axios.post('http://localhost:8080/auth/login', {
                 id: id,
                 password: pass,
-            });alert("login successful");
+            });alert(response.data);
     
             console.log(response.data);
             // Handle the response from the backend
@@ -22,6 +22,8 @@ export const Login = (props) => {
             // Handle errors, e.g., show an error message, etc.
         }
     }
+
+    
 
     return (
         <div>
