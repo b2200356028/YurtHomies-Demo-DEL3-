@@ -1,13 +1,26 @@
 import React, { useState } from "react";
+import axios from 'axios';
 
 export const Login = (props) => {
     const [id, setID] = useState('');
     const [pass, setPass] = useState('');
     const [rememberMe, setRememberMe] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(id);
+        try {
+            const response = await axios.post('http://localhost:8080/users/login', {
+                id: id,
+                password: pass,
+            });alert("login successful");
+    
+            console.log(response.data);
+            // Handle the response from the backend
+            // For example, store the JWT token in localStorage, redirect to a protected route, etc.
+        } catch (error) {
+            console.error('Error during login:', error);
+            // Handle errors, e.g., show an error message, etc.
+        }
     }
 
     return (
